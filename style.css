@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding-top: 5vw;
+    background-color: #ead1a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button{
+    margin-top: 2vw;
+    background-color: rgb(73, 73, 255);
+    width: 10vw;
+    height: 10vh;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: circle1 1s linear infinite;
+    visibility: hidden;
+}
+.button p{
+    color: #fff;
+    font-size: 2vw;
+    font-weight: 900;
+    font-family: cursive;
+}
+@keyframes circle1{
+    50%{
+        transform: scale(1.1);
+        background-color: #097fed;
+    }
+}
+/*****************************cards**********************/
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 32vw;
+    height: 32vw;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #464542;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+/* #card1{
+    background-color: #928a73;
+} */
+.image{
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+}
+/****icons x/o****************/
+#image1,#imagex1,#image2,#imagex2,#image3,#imagex3{
+    top: 5.9vw;
+    visibility: hidden;
+    transition: 0.1s ease;
+}
+#image1,#imagex1{
+    left: 34.5vw;
+}
+#image2,#imagex2{
+    left: 45.5vw;
+}
+#image3,#imagex3{
+    left: 56.5vw;
+}
+#image4,#imagex4,#image5,#imagex5,#image6,#imagex6{
+    top: 16.5vw;
+    visibility: hidden;
+    transition: 0.1s ease;
+}
+#image4,#imagex4{
+    left: 34.5vw;
+}
+#image5,#imagex5{
+    left: 45.5vw;
+}
+#image6,#imagex6{
+    left: 56.5vw;
+}
+#image7,#imagex7,#image8,#imagex8,#image9,#imagex9{
+    top: 27.2vw;
+    visibility: hidden;
+    transition: 0.1s ease;
+}
+#image7,#imagex7{
+    left: 34.5vw;
+}
+#image8,#imagex8{
+    left: 45.5vw;
+}
+#image9,#imagex9{
+    left: 56.5vw;
+}
+#card_click1,#card_click2,#card_click3,#card_click4,#card_click5,#card_click6,#card_click7,#card_click8,#card_click9{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+#card_click1:hover + #image1{
+    visibility: visible;
+    transform: scale(1.1);
+}
+#card_click2:hover + #image2{
+    visibility: visible;
+    transform: scale(1.1);
+}
+#card_click3:hover + #image3{
+    visibility: visible;
+    transform: scale(1.1);
+}
+#card_click4:hover + #image4{
+    visibility: visible;
+    transform: scale(1.1);
+}
+#card_click5:hover + #image5{
+    visibility: visible;
+    transform: scale(1.1);
+}
+#card_click6:hover + #image6{
+    visibility: visible;
+}
+#card_click7:hover + #image7{
+    visibility: visible;
+}
+#card_click8:hover + #image8{
+    visibility: visible;
+    transform: scale(1.1);
+}
+#card_click9:hover + #image9{
+    visibility: visible;
+    transform: scale(1.1);
+}
+.winner{
+    position: absolute;
+    background-color: #e1cd5b;
+    width: 2vw;
+    height: 0vh;
+    border-radius: 1vw;
+}
+#winner1{
+    top: 5vh;
+    left: 38vw;
+}
+#winner2{
+    top: 5vh;
+    left: 49vw;
+}
+#winner3{
+    top: 5vh;
+    left: 60vw;
+}
+#winner4{
+    top: 16vh;
+    left: 62.5vw;
+    transform-origin: 50% 0;
+    transform: rotate(45deg);
+}
+#winner5{
+    top: 16vh;
+    left: 35.5vw;
+    transform-origin: 50% 0;
+    transform: rotate(-45deg);
+}
+#winner6{
+    top: 22vh;
+    left: 67.5vw;
+    transform-origin: 50% 0;
+    transform: rotate(90deg);
+}
+#winner7{
+    top: 45vh;
+    left: 67.5vw;
+    transform-origin: 50% 0;
+    transform: rotate(90deg);
+}
+#winner8{
+    top: 67vh;
+    left: 67.5vw;
+    transform-origin: 50% 0;
+    transform: rotate(90deg);
+}
+
+@keyframes winer{
+    100%{
+        height: 37vw;
+    }
+}
+.party{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("icon/winner.gif");
+    visibility: hidden;
+}
+/*************************player1****************/
+.player_red{
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+    height: 45%;
+    width: 20%;
+    
+}
+#red{
+    height: 100%;
+    width: 100%;
+}
+.eyes{
+    position: absolute;
+    top: 47%;
+    left: 20%;
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.eye{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 4vw;
+    height: 4vw;
+    background-color: #fff;
+    border-radius: 5vw;
+}
+.loock1{
+    position: relative;
+    top: 10%;
+    left: 40%;
+    transform: translate (-50%, -50%);
+    transform-origin: 20% 70%;
+    width: 55%;
+    height: 55%;
+}
+/***************************player2****************/
+.player_green{
+    position: absolute;
+    top: 30vh;
+    right: 10vw;
+    height: 45%;
+    width: 20%;
+}
+@keyframes winerImg{
+    50%{
+        transform: scale(1.1);
+    }
+}
+#green{
+    height: 100%;
+    width: 100%;
+}
+.eyes{
+    position: absolute;
+    top: 47%;
+    left: 20%;
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.eye{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 4vw;
+    height: 4vw;
+    background-color: #fff;
+    border-radius: 5vw;
+}
+.loock2{
+    position: relative;
+    top: 10%;
+    left: 40%;
+    transform: translate (-50%, -50%);
+    transform-origin: 20% 70%;
+    width: 55%;
+    height: 55%;
+}
