@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="icon" href="logo1.png"> 
+    <title>X/O_Game</title>
+</head>
+<body>
+    <div class="cards">
+        <div class="card" id="card1">
+            <div id="card_click1"></div>
+            <img src="icon/1_x.png" alt="" id="image1" class="image">
+            <img src="n" alt="" id="imagex1" class="image">
+        </div>
+        <div class="card" id="card2">
+            <div id="card_click2"></div>
+            <img src="icon/1_x.png" alt="" id="image2" class="image">
+            <img src="n" alt="" id="imagex2" class="image">
+        </div>
+        <div class="card" id="card3">
+            <div id="card_click3"></div>
+            <img src="icon/1_x.png" alt="" id="image3" class="image">
+            <img src="n" alt="" id="imagex3" class="image">
+        </div>
+        <div class="card" id="card4">
+            <div id="card_click4"></div>
+            <img src="icon/1_x.png" alt="" id="image4" class="image">
+            <img src="n" alt="" id="imagex4" class="image">
+        </div>
+        <div class="card" id="card5">
+            <div id="card_click5"></div>
+            <img src="icon/1_x.png" alt="" id="image5" class="image">
+            <img src="n" alt="" id="imagex5" class="image">
+        </div>
+        <div class="card" id="card6">
+            <div id="card_click6"></div>
+            <img src="icon/1_x.png" alt="" id="image6" class="image">
+            <img src="n" alt="" id="imagex6" class="image">
+        </div>
+        <div class="card" id="card7">
+            <div id="card_click7"></div>
+            <img src="icon/1_x.png" alt="" id="image7" class="image">
+            <img src="n" alt="" id="imagex7" class="image">
+        </div>
+        <div class="card" id="card8">
+            <div id="card_click8"></div>
+            <img src="icon/1_x.png" alt="" id="image8" class="image">
+            <img src="n" alt="" id="imagex8" class="image">
+        </div>
+        <div class="card" id="card9">
+            <div id="card_click9"></div>
+            <img src="icon/1_x.png" alt="" id="image9" class="image">
+            <img src="n" alt="" id="imagex9" class="image">
+        </div>
+        <div class="winner" id="winner1"></div>
+        <div class="winner" id="winner2"></div>
+        <div class="winner" id="winner3"></div>
+        <div class="winner" id="winner4"></div>
+        <div class="winner" id="winner5"></div>
+        <div class="winner" id="winner6"></div>
+        <div class="winner" id="winner7"></div>
+        <div class="winner" id="winner8"></div>
+        <div class="party" id="party"></div>
+
+        <div class="player_red" id="player_red">
+            <img src="icon/red.png" alt="" id="red">
+            <div class="eyes" id="eyes1">
+                <div class="eye" id="eye1_red">
+                    <img src="icon/eye.png" alt=""  id="loock1" class="loock1">
+                </div>
+                <div class="eye" id="eye2_red">
+                    <img src="icon/eye.png" alt="" id="loock2" class="loock1">
+                </div>
+            </div>
+        </div>
+        <script>
+            const eye1_red = document.getElementById('loock1');
+            const container1 = document.getElementById('eye1_red');
+            const eye2_red = document.getElementById('loock2');
+            const container2 = document.getElementById('eye2_red');
+            const containerRect1 = container1.getBoundingClientRect();
+            const containerRect2 = container2.getBoundingClientRect();
+            const centerX = containerRect1.left + containerRect1.width / 2;
+            const centerY = containerRect2.top + containerRect2.height / 2;
+        
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX;
+                const y = e.clientY;
+                const dx = x - centerX;
+                const dy = y - centerY;
+                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+                eye1_red.style.transform = `rotate(${angle}deg)`;
+                eye2_red.style.transform = `rotate(${angle}deg)`;
+            });
+        </script>
+        <div class="player_green" id="player_green">
+            <img src="icon/green.png" alt="" id="green">
+            <div class="eyes" id="eyes2">
+                <div class="eye" id="eye1_green">
+                    <img src="icon/eye2.png" alt=""  id="loock3" class="loock2">
+                </div>
+                <div class="eye" id="eye2_green">
+                    <img src="icon/eye2.png" alt="" id="loock4" class="loock2">
+                </div>
+            </div>
+        </div>
+        <script>
+            const eye1_green = document.getElementById('loock3');
+            const container3 = document.getElementById('eye1_green');
+            const eye2_green = document.getElementById('loock4');
+            const container4 = document.getElementById('eye2_green');
+            const containerRect3 = container3.getBoundingClientRect();
+            const containerRect4 = container4.getBoundingClientRect();
+            const centerX1 = containerRect3.left + containerRect3.width / 2;
+            const centerY2 = containerRect4.top + containerRect4.height / 2;
+        
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX;
+                const y = e.clientY;
+                const dx = x - centerX1;
+                const dy = y - centerY2;
+                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+                eye1_green.style.transform = `rotate(${angle}deg)`;
+                eye2_green.style.transform = `rotate(${angle}deg)`;
+            });
+        </script>
+    </div>
+    <div class="button" id="button">
+        <p>Play again</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
